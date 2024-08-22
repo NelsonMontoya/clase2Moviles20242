@@ -30,7 +30,15 @@ public class MainActivity extends AppCompatActivity {
         usuario = (TextView) findViewById(R.id.txvUsuario);
         hola = findViewById(R.id.btnHola);
         mundo = findViewById(R.id.btnMundo);
+=======
 
+
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        Log.d(TAG,"Estoy en el onStart");
         hola.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -58,7 +66,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
-
 
     @Override
     protected void onResume() {
