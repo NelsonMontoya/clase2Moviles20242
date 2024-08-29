@@ -19,6 +19,8 @@ public class MainActivity extends AppCompatActivity {
     String nombreUsuario;
     String TAG = "Test";
 
+    Persona datosUsuario;   //defino el tipo de dato y el nombre
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,6 +32,9 @@ public class MainActivity extends AppCompatActivity {
         usuario = (TextView) findViewById(R.id.txvUsuario);
         hola = findViewById(R.id.btnHola);
         mundo = findViewById(R.id.btnMundo);
+        datosUsuario = new Persona(1020304050,(byte)50,"Pedro","Perez");
+
+
 
         hola.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -44,6 +49,10 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+
+        //Log.d(TAG,datosUsuario.getNombre());
+        //datosUsuario.setNombre("Alonso");
+        //Log.d(TAG,datosUsuario.getNombre());
 
 
     }
